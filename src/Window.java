@@ -35,15 +35,35 @@ public class Window extends JFrame {
 		
 		txtNum1 = new JTextField();
 		txtNum1.setColumns(5);
+		txtNum1.addKeyListener(new KeyAdapter() {
+			public void keyReleased(KeyEvent e) {
+				onUserInput(e);
+			}
+		});
 		
 		txtDenom1 = new JTextField();
 		txtDenom1.setColumns(5);
+        txtDenom1.addKeyListener(new KeyAdapter() {
+			public void keyReleased(KeyEvent e) {
+				onUserInput(e);
+			}
+		});
 		
 		txtNum2 = new JTextField();
 		txtNum2.setColumns(5);
+		txtNum2.addKeyListener(new KeyAdapter() {
+			public void keyReleased(KeyEvent e) {
+				onUserInput(e);
+			}
+		});
 		
 		txtDenom2 = new JTextField();
 		txtDenom2.setColumns(5);
+		txtDenom2.addKeyListener(new KeyAdapter() {
+			public void keyReleased(KeyEvent e) {
+				onUserInput(e);
+			}
+		});
 		
 		JLabel lblPlusOperator = new JLabel("+");
 		lblPlusOperator.setFont(new Font("Arial", Font.PLAIN, 20));
@@ -79,6 +99,11 @@ public class Window extends JFrame {
         mainPanel.setFocusTraversalKeys(KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, Collections.emptySet());
         mainPanel.setFocusTraversalKeys(KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, Collections.emptySet());
     }
+
+    // ------------------------------------------------ event handlers
+    private void onUserInput(KeyEvent e) {
+        
+    }    
 	
 	// ------------------------------------------------ main method
 	public static void main(String[] args) {
