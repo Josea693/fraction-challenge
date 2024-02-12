@@ -3,8 +3,6 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Collections;
-import java.util.Set;
-
 import net.miginfocom.swing.MigLayout;
 
 public class Window extends JFrame {
