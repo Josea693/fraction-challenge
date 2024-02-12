@@ -102,7 +102,15 @@ public class Window extends JFrame {
 
     // ------------------------------------------------ event handlers
     private void onUserInput(KeyEvent e) {
-        
+		// get input from textfields and convert to integer / catch if incorrect input
+		try {
+            
+			
+		} catch(NumberFormatException nfe) {
+			lblNumAns.setText("?");
+			lblDenomAns.setText("?");
+			lblLargerFraction.setText("?");
+		}        
     }    
 	
 	// ------------------------------------------------ main method
