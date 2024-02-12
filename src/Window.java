@@ -104,6 +104,11 @@ public class Window extends JFrame {
     private void onUserInput(KeyEvent e) {
 		// get input from textfields and convert to integer / catch if incorrect input
 		try {
+            int numf1 = Integer.parseInt(txtNum1.getText());
+            int numf2 = Integer.parseInt(txtNum2.getText());
+            int denomf1 = Integer.parseInt(txtDenom1.getText());
+            int denomf2 = Integer.parseInt(txtDenom2.getText());
+    
             
 			
 		} catch(NumberFormatException nfe) {
