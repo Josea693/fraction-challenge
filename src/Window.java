@@ -34,7 +34,7 @@ public class Window extends JFrame {
 		lblHeader.setFont(new Font("Arial", Font.PLAIN, 16));
 		
 		txtNum1 = new JTextField();
-		txtNum1.setColumns(5);
+		txtNum1.setPreferredSize(new Dimension(60, 20));
 		txtNum1.addKeyListener(new KeyAdapter() {
 			public void keyReleased(KeyEvent e) {
 				onUserInput(e);
@@ -42,7 +42,7 @@ public class Window extends JFrame {
 		});
 		
 		txtDenom1 = new JTextField();
-		txtDenom1.setColumns(5);
+		txtDenom1.setPreferredSize(new Dimension(60, 20));
         txtDenom1.addKeyListener(new KeyAdapter() {
 			public void keyReleased(KeyEvent e) {
 				onUserInput(e);
@@ -50,7 +50,7 @@ public class Window extends JFrame {
 		});
 		
 		txtNum2 = new JTextField();
-		txtNum2.setColumns(5);
+		txtNum2.setPreferredSize(new Dimension(60, 20));
 		txtNum2.addKeyListener(new KeyAdapter() {
 			public void keyReleased(KeyEvent e) {
 				onUserInput(e);
@@ -58,7 +58,7 @@ public class Window extends JFrame {
 		});
 		
 		txtDenom2 = new JTextField();
-		txtDenom2.setColumns(5);
+		txtDenom2.setPreferredSize(new Dimension(60, 20));
 		txtDenom2.addKeyListener(new KeyAdapter() {
 			public void keyReleased(KeyEvent e) {
 				onUserInput(e);
@@ -80,14 +80,14 @@ public class Window extends JFrame {
 		// row 1 - app title
 		mainPanel.add(lblHeader, "span, wrap");
 		// row 2 - numerator textfields / numerator answer label
-		mainPanel.add(txtNum1, "tag n1");
-		mainPanel.add(lblPlusOperator, "span 1 2");
-		mainPanel.add(txtNum2, "tag n2");
+		mainPanel.add(txtNum1);
+		mainPanel.add(lblPlusOperator, "span 1 2"); // span 1 2 means it will span 1 column and 2 rows
+		mainPanel.add(txtNum2);
 		mainPanel.add(lblEqualsOperator, "span 1 2");
 		mainPanel.add(lblNumAns, "wrap");
 		// row 3 - denominator textfields / denominator answer label
-		mainPanel.add(txtDenom1, "tag d1");
-		mainPanel.add(txtDenom2, "tag d2");
+		mainPanel.add(txtDenom1);
+		mainPanel.add(txtDenom2);
 		mainPanel.add(lblDenomAns);
 		// row 4 - add greater / less than indicator
 		lblLargerFraction = new JLabel("?");
