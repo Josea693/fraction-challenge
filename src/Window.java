@@ -24,7 +24,7 @@ public class Window extends JFrame {
 		
 		// predefined MigLayout grid
 		mainPanel.setLayout(new MigLayout("",
-            "[][][][][]",
+            "[][center][][center][]",
             "[]20[]5[]5[]"));
 
 		mainPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -81,9 +81,9 @@ public class Window extends JFrame {
 		mainPanel.add(lblHeader, "span, wrap");
 		// row 2 - numerator textfields / numerator answer label
 		mainPanel.add(txtNum1);
-		mainPanel.add(lblPlusOperator, "span 1 2"); // span 1 2 means it will span 1 column and 2 rows
+		mainPanel.add(lblPlusOperator, "span 1 2, aligny center"); // span 1 2 means it will span 1 column and 2 rows
 		mainPanel.add(txtNum2);
-		mainPanel.add(lblEqualsOperator, "span 1 2");
+		mainPanel.add(lblEqualsOperator, "span 1 2, aligny center");
 		mainPanel.add(lblNumAns, "wrap");
 		// row 3 - denominator textfields / denominator answer label
 		mainPanel.add(txtDenom1);
@@ -108,6 +108,15 @@ public class Window extends JFrame {
             int numf2 = Integer.parseInt(txtNum2.getText());
             int denomf1 = Integer.parseInt(txtDenom1.getText());
             int denomf2 = Integer.parseInt(txtDenom2.getText());
+
+			Fraction f1,f2,f3;
+			f1 = new Fraction(numf1, denomf1);
+			f2 = new Fraction(numf2, denomf2);
+
+			f3 = f1.add(f2);
+
+			lblNumAns.setText(Integer.toString(f3.getNumerator()));
+			lblDenomAns.setText(Integer.toString(f3.getDenominator()));
     
             
 			
@@ -122,5 +131,20 @@ public class Window extends JFrame {
 	public static void main(String[] args) {
 		Window window = new Window();
 		window.setVisible(true);
+
+
+		// // testing the Fraction class
+		// Fraction f1, f2, f3;
+		// f1 = new Fraction(1, 2);
+		// // f2 = new Fraction(1, 4);
+		// f2 = new Fraction(6);
+		
+		// // f3 = f1.add(f2);
+		// f3 = f1.add(4);
+
+		// System.out.println(f1.toString() + " + " + f2.toString() + " = " + f3.toString());
+		// System.out.println(f1.toDecimal());
+
+
 	}
 }
