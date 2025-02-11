@@ -58,7 +58,7 @@ public class Fraction {
         int newDenominator = b * d;
 
         sum = new Fraction(newNumerator, newDenominator);
-        return sum;
+        return sum.simplify();
     }
 
     public Fraction add(int number) {
@@ -66,5 +66,24 @@ public class Fraction {
         Fraction sum = add(myFraction);
         return sum;
     }
-    
+
+    public Fraction simplify (){
+        int a = getNumerator();
+        int b = getDenominator(); 
+        Fraction simplification = null;
+        for (int i=a; i>1; i--){
+            if (a % i == 0 && b % i == 0){
+                a = a / i;
+                b = b / i;
+                simplification = new Fraction (a, b);
+                break;
+            }
+        }
+        if (simplification == null);{
+            simplification = new Fraction(a, b);
+        }
+        return simplification;
+        
+    }
+
 }

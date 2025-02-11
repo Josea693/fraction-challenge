@@ -136,10 +136,10 @@ public class Window extends JFrame {
 		// // testing the Fraction class
 		// Fraction f1, f2, f3;
 		// f1 = new Fraction(1, 2);
-		// // f2 = new Fraction(1, 4);
+		// f2 = new Fraction(1, 4);
 		// f2 = new Fraction(6);
 		
-		// // f3 = f1.add(f2);
+		// f3 = f1.add(f2);
 		// f3 = f1.add(4);
 
 		// System.out.println(f1.toString() + " + " + f2.toString() + " = " + f3.toString());
